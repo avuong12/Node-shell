@@ -1,14 +1,5 @@
-process.stdout.write('prompt > ');
-
-process.stdin.on('data', function (data) {
-  const pwd = process.cwd();
-  process.stdout.write(pwd);
-  process.stdout.write('\nprompt > ');
-});
-
-module.exports=function (data) {
-  const pwd = process.cwd();
-  process.stdout.write(pwd);
-  process.stdout.write('\nprompt > ');
-};
-
+module.exports = function pwd () {
+  const cwd = process.cwd();
+  process.stdout.write(cwd + "\n");
+  process.stdout.write('prompt > ');
+}
